@@ -46,7 +46,32 @@ getInstruction("mashedPotatoes", 0, (step1) => {
   }, (error) => console.log(error));
 
 // Iteration 2 - using promises
-
+obtainInstruction('steak', 0)
+.then((step0) => {
+  document.querySelector("#steak").innerHTML += `<li>${steak[0]}</li>`;
+  document.querySelector("#steakImg").removeAttribute("hidden");
+}).then((step1)=>{
+  obtainInstruction('steak', 1);
+  document.querySelector("#steak").innerHTML += `<li>${steak[1]}</li>`;
+}).then(()=>{
+  obtainInstruction('steak', 2);
+  document.querySelector("#steak").innerHTML += `<li>${steak[2]}</li>`;
+}).then(()=>{
+  obtainInstruction('steak', 3);
+  document.querySelector("#steak").innerHTML += `<li>${steak[3]}</li>`;
+}).then(()=>{
+  obtainInstruction('steak', 4);
+  document.querySelector("#steak").innerHTML += `<li>${steak[4]}</li>`;
+}).then(()=>{
+  obtainInstruction('steak', 5);
+  document.querySelector("#steak").innerHTML += `<li>${steak[5]}</li>`;
+}).then(()=>{
+  obtainInstruction('steak', 6);
+  document.querySelector("#steak").innerHTML += `<li>${steak[6]}</li>`;
+}).then(()=>{
+  obtainInstruction('steak', 7);
+  document.querySelector("#steak").innerHTML += `<li>${steak[7]}</li>`;
+})
 
 // Iteration 3 using async/await
 // ...
